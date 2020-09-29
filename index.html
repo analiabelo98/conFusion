@@ -9,10 +9,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
    
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link href="CSS/Styles.css" rel="stylesheet">
+      <!-- endbuild -->
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -31,7 +33,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li> 
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a data-toggle="modal" id="loginButton">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
                 
@@ -91,7 +93,7 @@
                 </div>
                 <div class="col-sm-3 col" >                    
                     <p style="padding:40px;"></p>
-                    <span><a role="button" data-target="#reservation" class="btn btn-block nav-link btn-warning"
+                    <span><a role="button"  id="reservation" class="btn btn-block nav-link btn-warning"
                     data-toggle="modal" data-html="true" 
                     data-placement="bottom">Reserve Table</a></span>
                     
@@ -226,10 +228,10 @@
                 </div>
             </div>-->
              <!--Adding a Modal for RESERVATION-->
-    <div id="reservation" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
+    <div id="modalReservation" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content" >
             <!-- Modal content-->
-            <div class="modal-content">
+            <div class="modal-content" >
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -259,7 +261,7 @@
                                         <label class="btn btn-success active col-6">
                                           <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
                                         </label>
-                                        <label class="btn btn-danger col-2">
+                                        <label class="btn btn-danger col-">
                                           <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
                                         </label>
                                     </div>
@@ -383,28 +385,14 @@
         
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- SCRIPT FOR THE TOOLTIP<script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>-->
-    <script>
-         $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-    </script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+   
+  
 </body>
 
 </html>
